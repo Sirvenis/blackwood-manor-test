@@ -1,0 +1,318 @@
+{
+  "title": "Murder at Blackwood Manor",
+  "subtitle": "Solo Test Edition",
+  "setting": "A storm-locked English manor during a private family dinner.",
+  "playerRole": "You are a late-arriving dinner guest asked by Inspector Graves to help sort the truth from the table gossip.",
+  "solution": {
+    "killer": "dr-elise-ward",
+    "motive": "blackmail",
+    "method": "poisoned-digestive-tonic",
+    "evidence": "locked-medical-vial"
+  },
+  "characters": [
+    {
+      "id": "margaret-blackwood",
+      "name": "Margaret Blackwood",
+      "role": "The Widow",
+      "seat": "Head of the table, opposite the empty chair",
+      "secret": "She planned to leave Edmund after learning he had hidden a second will.",
+      "bio": "Elegant, cold, and impossible to rattle. Margaret hated Edmund, but she also hated scandal.",
+      "questions": [
+        {
+          "q": "Where were you when Lord Blackwood collapsed?",
+          "a": "At my seat. Ask anyone. I had not left the dining room since the soup was served.",
+          "clue": "widow-stayed-seated"
+        },
+        {
+          "q": "Did you want him dead?",
+          "a": "I wanted him humbled. That is not the same thing as dead.",
+          "clue": "marriage-cold"
+        },
+        {
+          "q": "Did Edmund drink anything unusual?",
+          "a": "Only that dreadful tonic Dr. Ward kept pressing on him. Edmund trusted doctors more than wives."
+        }
+      ]
+    },
+    {
+      "id": "clara-blackwood",
+      "name": "Clara Blackwood",
+      "role": "The Daughter",
+      "seat": "Near the rain-streaked windows",
+      "secret": "She forged Edmund's signature on a loan paper but planned to confess after dinner.",
+      "bio": "Sharp, emotional, and furious at being treated like a decorative heirloom.",
+      "questions": [
+        {
+          "q": "Why did you argue with your father before dinner?",
+          "a": "Because he was selling the west wing to pay Victor's debts while pretending I was the embarrassment.",
+          "clue": "west-wing-sale"
+        },
+        {
+          "q": "Did you touch his glass?",
+          "a": "No. I threw wine at the fireplace, not at him. There is a difference."
+        },
+        {
+          "q": "What did you see after dessert?",
+          "a": "Dr. Ward stood behind Father with her hand near his shoulder. I thought she was steadying him."
+        }
+      ]
+    },
+    {
+      "id": "victor-hale",
+      "name": "Victor Hale",
+      "role": "The Business Partner",
+      "seat": "Beside the brandy tray",
+      "secret": "His investments were collapsing and Edmund was about to cut him loose.",
+      "bio": "Smooth, overdressed, and sweating through a smile whenever money is mentioned.",
+      "questions": [
+        {
+          "q": "Did Edmund threaten you tonight?",
+          "a": "Threaten is a vulgar word. He expressed concerns about our partnership. Loudly.",
+          "clue": "victor-debt"
+        },
+        {
+          "q": "You poured brandy after dessert. Did Edmund drink it?",
+          "a": "He refused. Said brandy fought with the doctor's tonic."
+        },
+        {
+          "q": "Where were you during the blackout?",
+          "a": "By the sideboard. Thomas was there too. He can confirm I was nowhere near Edmund."
+        }
+      ]
+    },
+    {
+      "id": "dr-elise-ward",
+      "name": "Dr. Elise Ward",
+      "role": "The Family Doctor",
+      "seat": "Close enough to watch every pulse",
+      "secret": "Edmund discovered she was running illegal trials through her private clinic and planned to expose her at midnight.",
+      "bio": "Calm, precise, and helpful in a way that makes every answer sound rehearsed.",
+      "questions": [
+        {
+          "q": "What tonic did you give Lord Blackwood?",
+          "a": "A harmless digestive preparation. He had a weak stomach and a stronger talent for complaint.",
+          "clue": "digestive-tonic"
+        },
+        {
+          "q": "Did anyone else handle the tonic?",
+          "a": "No. Medical preparations are not toys. I kept it in my bag until he requested it."
+        },
+        {
+          "q": "Why was Edmund going to meet you at midnight?",
+          "a": "He was not. Whoever told you that enjoys drama more than accuracy."
+        }
+      ]
+    },
+    {
+      "id": "thomas-reed",
+      "name": "Thomas Reed",
+      "role": "The Butler",
+      "seat": "Never seated; always watching",
+      "secret": "He found Edmund's old confession about ruining his family but did not act on it.",
+      "bio": "Quiet, exact, and loyal to the house rather than any one Blackwood.",
+      "questions": [
+        {
+          "q": "What did you notice during dinner?",
+          "a": "Dr. Ward replaced the small brown bottle beside Lord Blackwood's plate after the lights flickered.",
+          "clue": "bottle-switch"
+        },
+        {
+          "q": "Did Victor leave the sideboard?",
+          "a": "No. Mr Hale was near me during the blackout, breathing like a guilty furnace."
+        },
+        {
+          "q": "Why not speak sooner?",
+          "a": "In this house, sir, truth is usually punished before it is believed."
+        }
+      ]
+    },
+    {
+      "id": "evelyn-cross",
+      "name": "Evelyn Cross",
+      "role": "The Actress",
+      "seat": "Nearest the piano",
+      "secret": "She came to retrieve letters proving Edmund had ruined her career years ago.",
+      "bio": "Glittering, theatrical, and tired of being remembered as someone else's scandal.",
+      "questions": [
+        {
+          "q": "Why were you invited tonight?",
+          "a": "Edmund enjoyed summoning ghosts and pretending they were guests.",
+          "clue": "old-letters"
+        },
+        {
+          "q": "Did you approach Edmund after dessert?",
+          "a": "Only to tell him he looked awful. I thought it was a kindness."
+        },
+        {
+          "q": "Did you see Dr. Ward's bag?",
+          "a": "Yes. Under her chair. Locked. Then not locked. I remember because the brass clasp caught the candlelight."
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "arrival",
+      "title": "Arrival in the Storm",
+      "body": "Rain lashes Blackwood Manor hard enough to blur the windows into silver threads. You arrive late, soaked to the collar, just as dinner moves toward dessert. Lord Edmund Blackwood raises his glass and smiles as if the storm has come by invitation.",
+      "image": "manor-placeholder",
+      "clues": [
+        "storm-cuts-road"
+      ]
+    },
+    {
+      "id": "dinner",
+      "title": "The Dinner Table",
+      "body": "The table is beautiful and poisonous: silver cutlery, candlelight, untouched smiles. Six guests circle Lord Blackwood like planets around a dying sun. Inspector Graves has not arrived yet. For now, you observe.",
+      "image": "table-placeholder"
+    },
+    {
+      "id": "murder",
+      "title": "Dessert Turns Deadly",
+      "body": "The lights flicker. Thunder lands directly over the roof. Lord Blackwood coughs once, grips the tablecloth, and turns a color no living man should wear. Dr. Ward reaches him first. By the time the lamps steady, the host is dead.",
+      "image": "murder-placeholder",
+      "clues": [
+        "tonic-before-collapse",
+        "blackout-moment"
+      ]
+    },
+    {
+      "id": "investigation",
+      "title": "Inspector Graves Takes the Room",
+      "body": "The bridge road is flooded. No one leaves before dawn. Inspector Graves, stranded nearby by the storm, asks you to help question the guests while he secures the body. Everyone had a motive. Only one had the method.",
+      "image": "inspector-placeholder"
+    }
+  ],
+  "clues": [
+    {
+      "id": "storm-cuts-road",
+      "title": "Flooded road",
+      "text": "No one can leave Blackwood Manor until morning.",
+      "image": "clue-flooded-road"
+    },
+    {
+      "id": "tonic-before-collapse",
+      "title": "Digestive tonic",
+      "text": "Edmund drank a doctor's tonic shortly before he collapsed.",
+      "image": "clue-tonic-bottle"
+    },
+    {
+      "id": "blackout-moment",
+      "title": "Blackout",
+      "text": "The room went dark for several seconds after dessert.",
+      "image": "clue-blackout"
+    },
+    {
+      "id": "widow-stayed-seated",
+      "title": "Margaret's alibi",
+      "text": "Margaret remained seated during the critical moments.",
+      "image": "table-placeholder"
+    },
+    {
+      "id": "marriage-cold",
+      "title": "Cold marriage",
+      "text": "Margaret hated Edmund but feared public scandal.",
+      "image": "old-letters"
+    },
+    {
+      "id": "west-wing-sale",
+      "title": "West wing sale",
+      "text": "Clara argued with Edmund about selling part of the estate.",
+      "image": "clue-west-wing-sale"
+    },
+    {
+      "id": "victor-debt",
+      "title": "Victor's debts",
+      "text": "Victor's business partnership with Edmund was collapsing.",
+      "image": "clue-victor-debt"
+    },
+    {
+      "id": "digestive-tonic",
+      "title": "Ward's medical tonic",
+      "text": "Dr. Ward claims the tonic was harmless and kept in her bag.",
+      "image": "clue-tonic-bottle"
+    },
+    {
+      "id": "bottle-switch",
+      "title": "Bottle switch",
+      "text": "Thomas saw Dr. Ward replace a small brown bottle after the lights flickered.",
+      "image": "clue-bottle-switch"
+    },
+    {
+      "id": "old-letters",
+      "title": "Evelyn's letters",
+      "text": "Evelyn came for letters connected to an old scandal.",
+      "image": "clue-old-letters"
+    },
+    {
+      "id": "locked-medical-vial",
+      "title": "Locked medical vial",
+      "text": "A locked vial in Dr. Ward's bag contains residue matching the tonic glass.",
+      "image": "clue-medical-bag"
+    },
+    {
+      "id": "midnight-blackmail",
+      "title": "Midnight meeting",
+      "text": "A note in Edmund's study says: Ward. Midnight. Confession or exposure.",
+      "image": "clue-midnight-note"
+    }
+  ],
+  "locations": [
+    {
+      "id": "study",
+      "name": "Edmund's Study",
+      "description": "A room of ledgers, old letters, and newer threats.",
+      "clues": [
+        "midnight-blackmail"
+      ],
+      "image": "clue-midnight-note"
+    },
+    {
+      "id": "medical-bag",
+      "name": "Dr. Ward's Medical Bag",
+      "description": "Locked in haste beneath her chair.",
+      "clues": [
+        "locked-medical-vial"
+      ],
+      "image": "clue-medical-bag"
+    },
+    {
+      "id": "sideboard",
+      "name": "Dining Room Sideboard",
+      "description": "Brandy, glasses, tonic residue, and Victor's fingerprints everywhere except the tonic bottle.",
+      "clues": [],
+      "image": "clue-sideboard"
+    }
+  ],
+  "accusationOptions": {
+    "killer": [
+      "margaret-blackwood",
+      "clara-blackwood",
+      "victor-hale",
+      "dr-elise-ward",
+      "thomas-reed",
+      "evelyn-cross"
+    ],
+    "motive": [
+      "inheritance",
+      "revenge",
+      "blackmail",
+      "jealousy",
+      "business-debt"
+    ],
+    "method": [
+      "poisoned-digestive-tonic",
+      "brandy-glass",
+      "knife-during-blackout",
+      "heart-medicine",
+      "fireplace-smoke"
+    ],
+    "evidence": [
+      "locked-medical-vial",
+      "old-letters",
+      "victor-debt",
+      "west-wing-sale",
+      "widow-stayed-seated"
+    ]
+  }
+}

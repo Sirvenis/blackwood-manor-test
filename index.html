@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Murder at Blackwood Manor</title>
+  <meta name="theme-color" content="#130d12">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Blackwood Manor">
+  <link rel="manifest" href="manifest.webmanifest?v=10">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=10">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <p class="eyebrow">Solo test edition</p>
+      <h1>Murder at Blackwood Manor</h1>
+      <p id="subtitle">A storm-locked mystery dinner prototype.</p>
+      <div class="top-actions">
+        <button id="newGameBtn" class="secondary">Restart</button>
+        <button id="notebookBtn" class="secondary">Notebook <span id="clueCount">0</span></button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel progress-panel" aria-label="Case progress">
+        <h2>Evening order</h2>
+        <ol id="sceneList" class="scene-list"></ol>
+        <div class="case-tip">
+          <strong>How to play:</strong>
+          Read the scene, question suspects, inspect locations, then make your accusation.
+        </div>
+      </aside>
+
+      <section class="stage panel">
+        <div id="imageCard" class="image-card">🏛️</div>
+        <p id="modeLabel" class="eyebrow">Arrival</p>
+        <h2 id="stageTitle">Loading case…</h2>
+        <div id="stageBody" class="story-text"></div>
+        <div id="stageActions" class="actions"></div>
+      </section>
+
+      <aside class="panel suspects-panel">
+        <h2>Guests at the table</h2>
+        <div id="suspectList" class="suspect-list"></div>
+      </aside>
+    </main>
+  </div>
+
+  <dialog id="notebookDialog">
+    <div class="dialog-head">
+      <h2>Notebook</h2>
+      <button id="closeNotebook" class="icon-btn" aria-label="Close notebook">×</button>
+    </div>
+    <div id="notebookBody"></div>
+  </dialog>
+
+  <script src="app.js?v=10"></script>
+</body>
+</html>

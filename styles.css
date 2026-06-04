@@ -1,0 +1,234 @@
+:root {
+  color-scheme: dark;
+  --bg: #130d12;
+  --panel: rgba(35, 26, 34, 0.92);
+  --panel-strong: #2c2029;
+  --text: #f7ead8;
+  --muted: #cbb9a7;
+  --accent: #d7a44b;
+  --accent-2: #8f2f2e;
+  --line: rgba(255,255,255,0.13);
+  --good: #8fd694;
+  --bad: #ff8c83;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(143,47,46,.45), transparent 34rem),
+    linear-gradient(135deg, #0c0910 0%, #20151e 50%, #09070a 100%);
+  color: var(--text);
+}
+button, select {
+  font: inherit;
+}
+button {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .75rem 1rem;
+  background: var(--accent);
+  color: #211307;
+  cursor: pointer;
+  font-weight: 700;
+}
+button:hover { filter: brightness(1.08); }
+button.secondary {
+  background: transparent;
+  color: var(--text);
+}
+button.choice {
+  display: block;
+  width: 100%;
+  margin: .45rem 0;
+  text-align: left;
+  border-radius: .8rem;
+  background: rgba(255,255,255,.06);
+  color: var(--text);
+}
+button.small { padding: .55rem .75rem; font-size: .9rem; }
+button.icon-btn { border-radius: 50%; width: 2.4rem; height: 2.4rem; padding: 0; }
+.app-shell { width: min(1500px, 100%); margin: 0 auto; padding: 1rem; }
+.hero {
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 1.4rem;
+  background: rgba(0,0,0,.28);
+  display: grid;
+  gap: .35rem;
+}
+.hero h1 { margin: 0; font-size: clamp(2rem, 6vw, 4.2rem); }
+.hero p { margin: 0; }
+.eyebrow { color: var(--accent); text-transform: uppercase; letter-spacing: .12em; font-size: .8rem; font-weight: 700; }
+.top-actions { display: flex; gap: .65rem; flex-wrap: wrap; margin-top: .7rem; }
+.layout {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr) 320px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 1.2rem;
+  background: var(--panel);
+  padding: 1rem;
+  box-shadow: 0 20px 80px rgba(0,0,0,.25);
+}
+.panel h2 { margin-top: 0; }
+.stage { min-height: 620px; }
+.image-card {
+  min-height: 210px;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(145deg, rgba(215,164,75,.22), rgba(143,47,46,.2)), #191017;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+.image-card img {
+  width: 100%;
+  height: min(46vh, 360px);
+  object-fit: contain;
+  background: #0f0a0e;
+  display: block;
+}
+.story-text { line-height: 1.65; color: #f3e7d7; font-size: 1.08rem; }
+.story-text p { margin-top: 0; }
+.actions { display: grid; gap: .7rem; margin-top: 1rem; }
+.scene-list { padding-left: 1.25rem; }
+.scene-list li { margin: .55rem 0; color: var(--muted); }
+.scene-list li.active { color: var(--accent); font-weight: 700; }
+.case-tip { margin-top: 1rem; color: var(--muted); line-height: 1.45; border-top: 1px solid var(--line); padding-top: 1rem; }
+.suspect-list { display: grid; gap: .65rem; }
+.suspect-card {
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: .8rem;
+  background: rgba(255,255,255,.045);
+}
+.suspect-card .suspect-portrait {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  background: #120c11;
+  border-radius: .8rem;
+  margin-bottom: .5rem;
+  display: block;
+}
+.suspect-card h3 { margin: 0 0 .25rem; }
+.suspect-card p { margin: .2rem 0; color: var(--muted); line-height: 1.35; }
+.tag { display: inline-block; font-size: .75rem; color: #261600; background: var(--accent); padding: .15rem .45rem; border-radius: 999px; font-weight: 700; }
+.clue-grid { display: grid; gap: .7rem; }
+.clue-card {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: .8rem;
+  padding: .75rem;
+  background: rgba(215,164,75,.08);
+}
+.clue-card h3 { margin: 0 0 .3rem; }
+.clue-card p { margin: 0; color: var(--muted); }
+.question-answer {
+  padding: .8rem;
+  background: rgba(0,0,0,.22);
+  border: 1px solid var(--line);
+  border-radius: .9rem;
+  margin: .7rem 0;
+}
+.question-answer strong { color: var(--accent); }
+.accuse-grid { display: grid; gap: .8rem; margin: 1rem 0; }
+.accuse-grid label { display: grid; gap: .3rem; color: var(--muted); }
+select {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: .8rem;
+  padding: .75rem;
+  background: #211720;
+  color: var(--text);
+}
+.result-pass { color: var(--good); }
+.result-fail { color: var(--bad); }
+dialog {
+  width: min(680px, calc(100% - 2rem));
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: #1b1319;
+  color: var(--text);
+  padding: 1rem;
+}
+dialog::backdrop { background: rgba(0,0,0,.7); }
+.dialog-head { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+@media (max-width: 1050px) {
+  .layout { grid-template-columns: 1fr; }
+  .stage { min-height: auto; }
+}
+
+button:disabled {
+  opacity: .58;
+  cursor: not-allowed;
+  filter: none;
+}
+.clue-strip {
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  flex-wrap: wrap;
+  margin: .85rem 0 0;
+  padding: .7rem;
+  border: 1px solid rgba(215,164,75,.35);
+  border-radius: .8rem;
+  background: rgba(215,164,75,.08);
+  color: var(--muted);
+}
+.clue-pill {
+  display: inline-block;
+  padding: .25rem .55rem;
+  border-radius: 999px;
+  background: rgba(215,164,75,.18);
+  border: 1px solid rgba(215,164,75,.32);
+  color: var(--text);
+  font-size: .88rem;
+}
+.clue-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translate(-50%, 130%);
+  z-index: 20;
+  width: min(520px, calc(100% - 2rem));
+  padding: .9rem 1rem;
+  border: 1px solid rgba(215,164,75,.55);
+  border-radius: 1rem;
+  background: rgba(31, 20, 27, .96);
+  color: var(--text);
+  box-shadow: 0 18px 70px rgba(0,0,0,.45);
+  transition: transform .25s ease;
+}
+.clue-toast.show { transform: translate(-50%, 0); }
+.clue-toast strong { color: var(--accent); }
+
+.clue-image {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  background: #100a0f;
+  border-radius: .7rem;
+  margin-bottom: .55rem;
+}
+.cinematic-video {
+  width: 100%;
+  max-height: 70vh;
+  border-radius: .9rem;
+  background: #000;
+}
+
+.suspect-card button {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
